@@ -14,6 +14,7 @@
 		4C2B5EE0214EEFFE0098B508 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2B5EDF214EEFFE0098B508 /* ViewController.swift */; };
 		4C2B5EE5214EF0000098B508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2B5EE4214EF0000098B508 /* Assets.xcassets */; };
 		4C2B5EE8214EF0000098B508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2B5EE6214EF0000098B508 /* LaunchScreen.storyboard */; };
+		4C376A6421584F9B007259E1 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C376A6321584F9B007259E1 /* UserDefaultsExtension.swift */; };
 		4C531D982152921500B403CE /* BubbleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C531D972152921500B403CE /* BubbleCell.swift */; };
 		4C531D9A2152930200B403CE /* CircleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C531D992152930200B403CE /* CircleLayout.swift */; };
 		4C53A7D7215829F200EBCA4A /* SMMRY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C53A7D6215829F200EBCA4A /* SMMRY.swift */; };
@@ -37,6 +38,7 @@
 		4C2B5EE4214EF0000098B508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C2B5EE7214EF0000098B508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C2B5EE9214EF0000098B508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C376A6321584F9B007259E1 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		4C531D972152921500B403CE /* BubbleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCell.swift; sourceTree = "<group>"; };
 		4C531D992152930200B403CE /* CircleLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLayout.swift; sourceTree = "<group>"; };
 		4C53A7D6215829F200EBCA4A /* SMMRY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMMRY.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				4C2925E3214F3FA40029996D /* Extensions.swift */,
+				4C376A6321584F9B007259E1 /* UserDefaultsExtension.swift */,
 				4C53A7D821583EEA00EBCA4A /* Configuration.plist */,
 			);
 			path = Helpers;
@@ -216,6 +219,7 @@
 				4C5A64342154B82D00AE4444 /* News.swift in Sources */,
 				4C2925E6214F40C40029996D /* NewsCell.swift in Sources */,
 				4C5A643B2155405C00AE4444 /* MainNavigationController.swift in Sources */,
+				4C376A6421584F9B007259E1 /* UserDefaultsExtension.swift in Sources */,
 				4C5A64392155318600AE4444 /* Page.swift in Sources */,
 				4C531D982152921500B403CE /* BubbleCell.swift in Sources */,
 				4C531D9A2152930200B403CE /* CircleLayout.swift in Sources */,
