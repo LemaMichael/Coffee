@@ -70,6 +70,10 @@ class FooterView: UITableViewHeaderFooterView {
         cell.fill(color: fillColor)
     }
     
+    func updateViews() {
+        countLabel.text = "\(UserDefaults.standard.getNewsRead().count) of 10"
+        collectionView.reloadData()
+    }
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)

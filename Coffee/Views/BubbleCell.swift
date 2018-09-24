@@ -22,7 +22,7 @@ class BubbleCell: UICollectionViewCell {
     func setup(color: UIColor, index: IndexPath) {
         countLabel.text = "\(index.item + 1)"
         let readArray = UserDefaults.standard.getNewsRead()
-        if readArray.contains(index.item) {
+        if readArray.contains(index.item + 1) {
             fill(color: color)
         } else {
             unfill(color: color)

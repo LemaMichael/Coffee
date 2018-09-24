@@ -145,6 +145,7 @@ class ViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        footerView.updateViews()
     }
     
 }
@@ -156,7 +157,6 @@ extension ViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! NewsCell
         cell.setup(color: UIColor.App.allColors[indexPath.item], index: indexPath)
-        
         if !request.articles.isEmpty {
             let article = request.articles[indexPath.item]
             cell.update(title: article.title, source: article.source.id ?? article.source.name)
@@ -186,7 +186,7 @@ extension ViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UserDefaults.standard.setNewsAsRead(value: indexPath.item)
+        UserDefaults.standard.setNewsAsRead(value: indexPath.item + 1)
         footerView.updateReadCount(index: indexPath, fillColor: UIColor.App.allColors[indexPath.item])
         pvc.setViewController(index: indexPath.item)
         self.navigationController?.pushViewController(pvc, animated: true)

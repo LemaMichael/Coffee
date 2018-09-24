@@ -61,7 +61,7 @@ class NewsCell: UITableViewCell {
         newsTypeLabel.textColor = color
         
         let readArray = UserDefaults.standard.getNewsRead()
-        if readArray.contains(index.item) {
+        if readArray.contains(index.item + 1) {
             fill(color: color)
         } else {
             unfill(color: color)

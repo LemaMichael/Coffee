@@ -59,14 +59,26 @@ class ArticleCell: UITableViewCell {
     
     func setup(count: String, color: UIColor) {
         bubble.setTitle(count, for: .normal)
-        bubble.setTitleColor(color, for: .normal) // unread
         bubble.layer.borderColor = color.cgColor
         newsTypeLabel.textColor = color
+        
+        fill(color: color)
+        let readArray = UserDefaults.standard.getNewsRead()
+        let articleNumber = Int(count) ?? 1
+        if !readArray.contains(articleNumber) {
+            UserDefaults.standard.setNewsAsRead(value: articleNumber)
+        }
     }
     
     func update(title: String, body: String) {
         headingLabel.text = title
         bodyLabel.text = body
+    }
+    
+    func fill(color: UIColor) {
+        // todo animate the fill to let reader know the artcle has now been read
+        self.bubble.setTitleColor(.white, for: .normal)
+        self.bubble.backgroundColor = color
     }
     
     func setupCell() {
