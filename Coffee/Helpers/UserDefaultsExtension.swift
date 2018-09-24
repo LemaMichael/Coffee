@@ -19,7 +19,7 @@ extension UserDefaults {
         if !readArray.contains(value) {
             readArray.append(value)
         }
-        set(value, forKey: UserDefaultKeys.newsRead.rawValue)
+        set(readArray, forKey: UserDefaultKeys.newsRead.rawValue)
         synchronize()
     }
     func getNewsRead() -> [Int] {

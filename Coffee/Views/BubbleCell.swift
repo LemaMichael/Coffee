@@ -19,6 +19,16 @@ class BubbleCell: UICollectionViewCell {
         return label
     }()
     
+    func setup(color: UIColor, index: IndexPath) {
+        countLabel.text = "\(index.item + 1)"
+        let readArray = UserDefaults.standard.getNewsRead()
+        if readArray.contains(index.item) {
+            fill(color: color)
+        } else {
+            unfill(color: color)
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -34,6 +44,12 @@ class BubbleCell: UICollectionViewCell {
         self.countLabel.textColor = .white
         self.contentView.backgroundColor = color
         self.contentView.layer.borderColor = color.cgColor
+    }
+
+    func unfill(color: UIColor) {
+        self.countLabel.textColor = UIColor.App.gray
+        self.contentView.backgroundColor = .white
+        self.contentView.layer.borderColor =  UIColor.App.gray.cgColor
     }
     
     required init?(coder aDecoder: NSCoder) {

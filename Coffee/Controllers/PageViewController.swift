@@ -10,16 +10,6 @@ import Foundation
 import UIKit
 
 class PageViewController: UIPageViewController {
-    let allColors: [UIColor] = [UIColor.App.blue,
-                                UIColor.App.green,
-                                UIColor.App.orange,
-                                UIColor.App.brightGreen,
-                                UIColor.App.pink,
-                                UIColor.App.yellow,
-                                UIColor.App.lightBlue,
-                                UIColor.App.purple,
-                                UIColor.App.lightGreen,
-                                UIColor.App.darkOrange]
     
     let dismissButton: UIButton = {
         let button = UIButton(type: .custom)
@@ -39,7 +29,7 @@ class PageViewController: UIPageViewController {
     func setupPages(article: [Article]) {
         for (index, page) in pages.enumerated() {
             if let page = page as? Page {
-                page.update(article: article[index], count: "\(index + 1)", color: allColors[index])
+                page.update(article: article[index], count: "\(index + 1)", color: UIColor.App.allColors[index])
             }
         }
     }

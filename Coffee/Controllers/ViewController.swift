@@ -10,18 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     let identifier = "cell"
-    
-    let allColors: [UIColor] = [UIColor.App.blue,
-                                UIColor.App.green,
-                                UIColor.App.orange,
-                                UIColor.App.brightGreen,
-                                UIColor.App.pink,
-                                UIColor.App.yellow,
-                                UIColor.App.lightBlue,
-                                UIColor.App.purple,
-                                UIColor.App.lightGreen,
-                                UIColor.App.darkOrange]
-    
+
     var headerView: UIView!
     var headerMaskLayer: CAShapeLayer!
 
@@ -62,7 +51,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         makeNewsRequest()
-       
+        //UserDefaults.standard.setValue(nil, forKey: UserDefaults.UserDefaultKeys.newsRead.rawValue)
         tableView.showsVerticalScrollIndicator = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -166,7 +155,7 @@ extension ViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! NewsCell
-        cell.setup(count: "\(indexPath.item + 1)", color: allColors[indexPath.item])
+        cell.setup(color: UIColor.App.allColors[indexPath.item], index: indexPath)
         
         if !request.articles.isEmpty {
             let article = request.articles[indexPath.item]
@@ -197,10 +186,10 @@ extension ViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        footerView.updateReadCount(index: indexPath, fillColor: allColors[indexPath.item])
+        UserDefaults.standard.setNewsAsRead(value: indexPath.item)
+        footerView.updateReadCount(index: indexPath, fillColor: UIColor.App.allColors[indexPath.item])
         pvc.setViewController(index: indexPath.item)
         self.navigationController?.pushViewController(pvc, animated: true)
-
     }
 }
 

@@ -69,6 +69,17 @@ extension UIColor {
         
         // purple
         static let purple = UIColor(red:0.73, green:0.18, blue:0.91, alpha:1.00)
+        
+        static let allColors = [App.blue,
+                               App.green,
+                               App.orange,
+                               App.brightGreen,
+                               App.pink,
+                               App.yellow,
+                               App.lightBlue,
+                               App.purple,
+                               App.lightGreen,
+                               App.darkOrange]
     }
     
 }

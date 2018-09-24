@@ -55,11 +55,26 @@ class NewsCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(count: String, color: UIColor) {
-        bubble.setTitle(count, for: .normal)
-        bubble.setTitleColor(color, for: .normal) // unread
+    func setup(color: UIColor, index: IndexPath) {
+        bubble.setTitle("\(index.item + 1)", for: .normal)
         bubble.layer.borderColor = color.cgColor
         newsTypeLabel.textColor = color
+        
+        let readArray = UserDefaults.standard.getNewsRead()
+        if readArray.contains(index.item) {
+            fill(color: color)
+        } else {
+            unfill(color: color)
+        }
+    }
+    func fill(color: UIColor) {
+        self.bubble.setTitleColor(.white, for: .normal)
+        self.bubble.backgroundColor = color
+    }
+    
+    func unfill(color: UIColor) {
+        bubble.setTitleColor(color, for: .normal)
+        self.bubble.backgroundColor = .white
     }
     
     func update(title: String, source: String) {

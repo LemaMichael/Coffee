@@ -35,7 +35,7 @@ class FooterView: UITableViewHeaderFooterView {
     }()
     let countLabel: UILabel = {
         let label = UILabel()
-        label.text = "0 of 10"
+        label.text = "\(UserDefaults.standard.getNewsRead().count) of 10"
         label.textAlignment = .center
         label.font = UIFont(name: "HelveticaNeue", size: 41)
         return label
@@ -61,19 +61,13 @@ class FooterView: UITableViewHeaderFooterView {
         print("Tapped!")
     }
     
-    var indexPaths = [IndexPath]()
-    var readNumber = 0
     func updateReadCount(index: IndexPath, fillColor: UIColor)  {
-
-        if !indexPaths.contains(index) {
-            indexPaths.append(index)
-            readNumber += 1
-            countLabel.text = "\(readNumber) of 10"
-            
-            // Update bubble background color
-            let cell = collectionView.cellForItem(at: index) as! BubbleCell
-            cell.fill(color: fillColor)
-        }
+        let readArray = UserDefaults.standard.getNewsRead()
+        countLabel.text = "\(readArray.count) of 10"
+        
+        // Update bubble background color
+        let cell = collectionView.cellForItem(at: index) as! BubbleCell
+        cell.fill(color: fillColor)
     }
     
     
@@ -134,7 +128,7 @@ extension FooterView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: bubbleId, for: indexPath) as! BubbleCell
-        cell.countLabel.text = "\(indexPath.item + 1)"
+        cell.setup(color: UIColor.App.allColors[indexPath.item], index: indexPath)
         return cell
     }
     
