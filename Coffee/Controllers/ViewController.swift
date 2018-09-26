@@ -51,7 +51,6 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         makeNewsRequest()
-        //UserDefaults.standard.setValue(nil, forKey: UserDefaults.UserDefaultKeys.newsRead.rawValue)
         tableView.showsVerticalScrollIndicator = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -61,6 +60,7 @@ class ViewController: UITableViewController {
         setupDateLabels()
         setupTableView()
         updateHeaderView()
+        configureReadStories()
     }
     
     func makeNewsRequest() {
@@ -95,6 +95,15 @@ class ViewController: UITableViewController {
         dateFormatter.dateFormat = "a"
         let ending = dateFormatter.string(from: date) == "AM" ? " morning | US" : " evening | US"
         dateSubLabel.text = day + ending
+    }
+    
+    func configureReadStories() {
+        let now = Date()
+        let lastSignedIn = UserDefaults.standard.getDate()
+        let hoursPassed = Calendar.current.dateComponents([.hour], from: lastSignedIn, to: now).hour ?? 0
+        if hoursPassed >= 6 {
+            UserDefaults.standard.setValue(nil, forKey: UserDefaults.UserDefaultKeys.newsRead.rawValue)
+        }
     }
     
     fileprivate func setupTableView() {

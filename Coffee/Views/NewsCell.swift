@@ -79,9 +79,9 @@ class NewsCell: UITableViewCell {
     
     func update(title: String, source: String) {
         headingLabel.text = title
-        var source = source.replacingOccurrences(of: "-", with: " ", options: .literal, range: nil)
-        source.replaceSubrange(source.startIndex..<source.index(source.startIndex, offsetBy: 1), with: String(source[source.startIndex]).capitalized)
-        subHeadingLabel.text = source
+        let source = source.replacingOccurrences(of: "-", with: " ", options: .literal, range: nil)
+        //source.replaceSubrange(source.startIndex..<source.index(source.startIndex, offsetBy: 1), with: String(source[source.startIndex]).capitalized)
+        subHeadingLabel.text = source.capitalized
     }
     
     func setupCell() {

@@ -12,6 +12,7 @@ import UIKit
 extension UserDefaults {
     enum UserDefaultKeys: String {
         case newsRead
+        case dateRead
     }
     
     func setNewsAsRead(value: Int) {
@@ -27,5 +28,18 @@ extension UserDefaults {
         return readArray
     }
     
+    func setDate(value: Date) {
+        set(value, forKey: UserDefaultKeys.dateRead.rawValue)
+        synchronize()
+    }
     
+    func getDate() -> Date {
+        guard let savedDate = object(forKey: UserDefaultKeys.dateRead.rawValue) as? Date else {
+            let now = Date()
+            setDate(value: now)
+            return now
+        }
+        return savedDate
+    }
+
 }
