@@ -137,7 +137,7 @@ class NewsCell: UITableViewCell {
     
     func setupConstraints() {
         let customHeight = UIScreen.main.bounds.height - Header.shared.height
-        bubble.anchor(top: self.topAnchor, bottom: nil, left: self.leftAnchor, right: nil, paddingTop: customHeight * 0.052, paddingBottom: 0, paddingLeft: 10, paddingRight: 0, width: 30, height: 30)
+        bubble.anchor(top: self.topAnchor, bottom: nil, left: self.leftAnchor, right: nil, paddingTop: customHeight * 0.07, paddingBottom: 0, paddingLeft: 10, paddingRight: 0, width: 30, height: 30)
         
         newsTypeLabel.anchor(top: nil, bottom: nil, left: bubble.rightAnchor, right: nil, paddingTop: 0, paddingBottom: 0, paddingLeft: 8, paddingRight: 0, width: 150, height: 25)
         newsTypeLabel.centerYAnchor.constraint(equalTo: bubble.centerYAnchor).isActive = true

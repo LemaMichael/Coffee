@@ -195,7 +195,7 @@ extension ViewController {
 extension ViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.height * 0.35
+        return UIScreen.main.bounds.height - Header.shared.height
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
