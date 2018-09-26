@@ -30,7 +30,6 @@ class NewsCell: UITableViewCell {
     
     let headingLabel: UILabel = {
        let label = UILabel()
-        label.textColor = UIColor.black
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.numberOfLines = 0
         label.sizeToFit()
@@ -81,7 +80,7 @@ class NewsCell: UITableViewCell {
     
     func unfill(color: UIColor) {
         bubble.setTitleColor(color, for: .normal)
-        self.bubble.backgroundColor = .white
+        self.bubble.backgroundColor = UserDefaults.standard.isDarkMode()  ? .black : .white
     }
     
     func update(title: String, source: String) {
@@ -97,6 +96,14 @@ class NewsCell: UITableViewCell {
         self.addSubview(headingLabel)
         self.addSubview(subHeadingLabel)
         self.addSubview(itemsStackView)
+        
+        if UserDefaults.standard.isDarkMode() {
+            self.backgroundColor = .black
+            self.headingLabel.textColor = .white
+        } else {
+            self.backgroundColor = .white
+            self.headingLabel.textColor = .black
+        }
     }
     
     func setupConstraints() {

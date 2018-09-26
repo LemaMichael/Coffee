@@ -13,6 +13,7 @@ extension UserDefaults {
     enum UserDefaultKeys: String {
         case newsRead
         case dateRead
+        case darkMode
     }
     
     func setNewsAsRead(value: Int) {
@@ -40,6 +41,15 @@ extension UserDefaults {
             return now
         }
         return savedDate
+    }
+    
+    func setDarkMode(value: Bool) {
+        set(value, forKey: UserDefaultKeys.darkMode.rawValue)
+        synchronize()
+    }
+    
+    func isDarkMode() -> Bool {
+        return bool(forKey: UserDefaultKeys.darkMode.rawValue)
     }
 
 }

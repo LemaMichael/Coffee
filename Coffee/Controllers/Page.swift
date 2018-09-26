@@ -82,7 +82,8 @@ class Page: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ArticleCell.self, forCellReuseIdentifier: identifier)
-        
+        tableView.backgroundColor = UserDefaults.standard.isDarkMode() ? .black : .white
+
         setupTableView()
         updateHeaderView()
         

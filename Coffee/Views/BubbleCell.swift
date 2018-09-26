@@ -48,7 +48,7 @@ class BubbleCell: UICollectionViewCell {
 
     func unfill(color: UIColor) {
         self.countLabel.textColor = UIColor.App.gray
-        self.contentView.backgroundColor = .white
+        self.contentView.backgroundColor = UserDefaults.standard.isDarkMode() ? .black : .white
         self.contentView.layer.borderColor =  UIColor.App.gray.cgColor
     }
     

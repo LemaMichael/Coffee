@@ -86,6 +86,16 @@ class ArticleCell: UITableViewCell {
         self.addSubview(newsTypeLabel)
         self.addSubview(headingLabel)
         self.addSubview(bodyLabel)
+        
+        if UserDefaults.standard.isDarkMode() {
+            self.backgroundColor = .black
+            self.headingLabel.textColor = .white
+            self.bodyLabel.textColor = .white
+        } else {
+            self.bodyLabel.textColor = .black
+            self.backgroundColor = .white
+            self.headingLabel.textColor = .black
+        }
     }
     
     func setupConstraints() {

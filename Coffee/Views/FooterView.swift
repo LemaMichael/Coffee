@@ -92,6 +92,16 @@ class FooterView: UITableViewHeaderFooterView {
         collectionView.reloadData()
         
         moreButton.addTarget(self, action: #selector(moreButtonTapped), for: .touchUpInside)
+        
+        if UserDefaults.standard.isDarkMode() {
+            self.contentView.backgroundColor = .black
+            self.readLabel.textColor = .white
+            self.countLabel.textColor = .white
+        } else {
+            self.contentView.backgroundColor = .white
+            self.readLabel.textColor = .black
+            self.countLabel.textColor = .white
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

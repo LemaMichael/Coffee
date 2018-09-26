@@ -51,13 +51,14 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         makeNewsRequest()
+        setupDateLabels()
         tableView.showsVerticalScrollIndicator = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(NewsCell.self, forCellReuseIdentifier: identifier)
         tableView.tableFooterView = footerView
-
-        setupDateLabels()
+        tableView.backgroundColor = UserDefaults.standard.isDarkMode() ? .black : .white
+        
         setupTableView()
         updateHeaderView()
         configureReadStories()
@@ -94,6 +95,7 @@ class ViewController: UITableViewController {
         let day = dateFormatter.string(from: date).lowercased()
         dateFormatter.dateFormat = "a"
         let ending = dateFormatter.string(from: date) == "AM" ? " morning | US" : " evening | US"
+        UserDefaults.standard.setDarkMode(value: dateFormatter.string(from: date) == "AM" ? false : true)
         dateSubLabel.text = day + ending
     }
     
