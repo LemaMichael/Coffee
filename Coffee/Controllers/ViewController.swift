@@ -98,6 +98,7 @@ class ViewController: UITableViewController {
     }
     
     func configureReadStories() {
+        //UserDefaults.standard.setValue(nil, forKey: UserDefaults.UserDefaultKeys.newsRead.rawValue)
         let now = Date()
         let lastSignedIn = UserDefaults.standard.getDate()
         let hoursPassed = Calendar.current.dateComponents([.hour], from: lastSignedIn, to: now).hour ?? 0

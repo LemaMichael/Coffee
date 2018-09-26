@@ -45,6 +45,13 @@ class NewsCell: UITableViewCell {
         return label
     }()
     
+    lazy var itemsStackView: UIStackView = {
+        let sv = UIStackView()
+        sv.distribution = .fillEqually
+        sv.axis = .horizontal
+        return sv
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupCell()
@@ -89,6 +96,7 @@ class NewsCell: UITableViewCell {
         self.addSubview(newsTypeLabel)
         self.addSubview(headingLabel)
         self.addSubview(subHeadingLabel)
+        self.addSubview(itemsStackView)
     }
     
     func setupConstraints() {
@@ -100,6 +108,8 @@ class NewsCell: UITableViewCell {
         
         headingLabel.anchor(top: newsTypeLabel.bottomAnchor, bottom: nil, left: newsTypeLabel.leftAnchor, right: self.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 20, width: 0, height: customHeight * 0.4)
         
-        subHeadingLabel.anchor(top: headingLabel.bottomAnchor, bottom: nil, left: newsTypeLabel.leftAnchor, right: self.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: 20)
+        subHeadingLabel.anchor(top: headingLabel.bottomAnchor, bottom: nil, left: newsTypeLabel.leftAnchor, right: self.rightAnchor, paddingTop: 12, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: customHeight * 0.065)
+        
+        itemsStackView.anchor(top: subHeadingLabel.bottomAnchor, bottom: nil, left: headingLabel.leftAnchor, right: headingLabel.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: customHeight * 0.13)
     }
 }
