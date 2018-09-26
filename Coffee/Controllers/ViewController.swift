@@ -95,7 +95,7 @@ class ViewController: UITableViewController {
         let day = dateFormatter.string(from: date).lowercased()
         dateFormatter.dateFormat = "a"
         let ending = dateFormatter.string(from: date) == "AM" ? " morning | US" : " evening | US"
-        UserDefaults.standard.setDarkMode(value: dateFormatter.string(from: date) == "AM" ? false : true)
+        UserDefaults.standard.setDarkMode(value: dateFormatter.string(from: date) == "AM" ? true : false)
         dateSubLabel.text = day + ending
     }
     

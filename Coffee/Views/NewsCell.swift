@@ -44,25 +44,38 @@ class NewsCell: UITableViewCell {
         return label
     }()
     
-    let marker: UIImageView = {
+    let wikiIcon: UIImageView = {
+        let marker = UIImageView()
+        marker.image = UIImage(named: "Wiki")
+        marker.contentMode = .scaleAspectFit
+        return marker
+    }()
+    let markerIcon: UIImageView = {
         let marker = UIImageView()
         marker.image = UIImage(named: "Marker")
         marker.contentMode = .scaleAspectFit
         return marker
     }()
-    let marker2: UIImageView = {
+    let mountainIcon: UIImageView = {
         let marker = UIImageView()
         marker.image = UIImage(named: "Mountain")
+        marker.contentMode = .scaleAspectFit
+        return marker
+    }()
+    let twitterIcon: UIImageView = {
+        let marker = UIImageView()
+        marker.image = UIImage(named: "Twitter")
         marker.contentMode = .scaleAspectFit
         return marker
     }()
     
     lazy var itemsStackView: UIStackView = {
         let sv = UIStackView()
-        
-        sv.addArrangedSubview(marker)
-        sv.addArrangedSubview(marker2)
-        sv.distribution = .equalSpacing
+        sv.addArrangedSubview(wikiIcon)
+        sv.addArrangedSubview(markerIcon)
+        sv.addArrangedSubview(mountainIcon)
+        sv.addArrangedSubview(twitterIcon)
+        sv.distribution = .equalCentering
         sv.axis = .horizontal
         return sv
     }()
@@ -133,6 +146,11 @@ class NewsCell: UITableViewCell {
         
         subHeadingLabel.anchor(top: headingLabel.bottomAnchor, bottom: nil, left: newsTypeLabel.leftAnchor, right: self.rightAnchor, paddingTop: 12, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: customHeight * 0.065)
         
-        itemsStackView.anchor(top: subHeadingLabel.bottomAnchor, bottom: nil, left: headingLabel.leftAnchor, right: nil, paddingTop: 6, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: self.frame.width / 2, height: 25)
+        itemsStackView.anchor(top: subHeadingLabel.bottomAnchor, bottom: nil, left: headingLabel.leftAnchor, right: nil, paddingTop: 6, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 118, height: 30)
+        
+        wikiIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        markerIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        mountainIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        twitterIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
     }
 }
