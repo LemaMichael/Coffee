@@ -97,7 +97,8 @@ class ViewController: UITableViewController {
         let ending = dateFormatter.string(from: date) == "AM" ? " morning | US" : " evening | US"
         
         let hour = Calendar.current.component(.hour, from: date)
-        UserDefaults.standard.setDarkMode(value: (hour >= 6 || hour <= 19) ? false : true)
+        // Pattern Matching ~= 
+        UserDefaults.standard.setDarkMode(value: (6..<19 ~= hour) ? false : true)
         dateSubLabel.text = day + ending
     }
     

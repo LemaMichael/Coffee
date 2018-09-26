@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.rootViewController = MainNavigationController()
         
+        #if DEBUG
+        Bundle(path: "/Applications/InjectionX.app/Contents/Resources/iOSInjection.bundle")?.load()
+        #endif
         return true
     }
 
