@@ -72,7 +72,9 @@ class RequestNews {
                 let decoder = JSONDecoder()
                 let top20News = try decoder.decode(News.self, from: data)
                 for article in top20News.articles {
-                    self.articles.append(article)
+                    if article.urlToImage != nil {
+                        self.articles.append(article)
+                    }
                 }
                 finished()
                 

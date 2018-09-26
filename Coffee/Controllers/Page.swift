@@ -43,9 +43,11 @@ class Page: UIViewController {
         
         if let url = article.urlToImage {
             DispatchQueue.global().async {
-                let data = try? Data(contentsOf: URL(string: url)!)
+                guard let validURL = URL(string: url) else { return }
+                let data = try? Data(contentsOf: validURL)
                 DispatchQueue.main.async {
-                    self.imageView.image = UIImage(data: data!)
+                    guard let validData = data else { return }
+                    self.imageView.image = UIImage(data: validData)
                 }
             }
         } else {

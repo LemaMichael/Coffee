@@ -97,10 +97,12 @@ class FooterView: UITableViewHeaderFooterView {
             self.contentView.backgroundColor = .black
             self.readLabel.textColor = .white
             self.countLabel.textColor = .white
+            self.readMoreLabel.textColor = .white
         } else {
             self.contentView.backgroundColor = .white
             self.readLabel.textColor = .black
             self.countLabel.textColor = .white
+            self.readMoreLabel.textColor = .black
         }
     }
     
