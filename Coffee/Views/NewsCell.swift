@@ -146,8 +146,8 @@ class NewsCell: UITableViewCell {
         
         subHeadingLabel.anchor(top: headingLabel.bottomAnchor, bottom: nil, left: newsTypeLabel.leftAnchor, right: self.rightAnchor, paddingTop: 12, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: customHeight * 0.065)
         
-        itemsStackView.anchor(top: subHeadingLabel.bottomAnchor, bottom: nil, left: headingLabel.leftAnchor, right: nil, paddingTop: 6, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 118, height: 30)
-        
+        itemsStackView.anchor(top: subHeadingLabel.bottomAnchor, bottom: nil, left: headingLabel.leftAnchor, right: nil, paddingTop: 10, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 118, height: 30)
+
         wikiIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
         markerIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
         mountainIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
