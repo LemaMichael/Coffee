@@ -25,6 +25,7 @@ class NewsCell: UITableViewCell {
        let label = UILabel()
         label.font = UIFont(name: "Avenir-Heavy", size: 18)
         label.text = "US News"
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -33,6 +34,7 @@ class NewsCell: UITableViewCell {
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.numberOfLines = 0
         label.sizeToFit()
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -41,6 +43,7 @@ class NewsCell: UITableViewCell {
         label.textColor = UIColor(red:0.45, green:0.46, blue:0.48, alpha:1.00)
         label.numberOfLines = 1
         label.sizeToFit()
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -145,9 +148,9 @@ class NewsCell: UITableViewCell {
         
         headingLabel.anchor(top: newsTypeLabel.bottomAnchor, bottom: nil, left: newsTypeLabel.leftAnchor, right: self.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 20, width: 0, height: customHeight * 0.4)
         
-        subHeadingLabel.anchor(top: headingLabel.bottomAnchor, bottom: nil, left: newsTypeLabel.leftAnchor, right: self.rightAnchor, paddingTop: 12, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: customHeight * 0.065)
+        subHeadingLabel.anchor(top: headingLabel.bottomAnchor, bottom: nil, left: newsTypeLabel.leftAnchor, right: self.rightAnchor, paddingTop: 2, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: customHeight * 0.15)
         
-        itemsStackView.anchor(top: subHeadingLabel.bottomAnchor, bottom: nil, left: headingLabel.leftAnchor, right: nil, paddingTop: 10, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 118, height: 30)
+        itemsStackView.anchor(top: subHeadingLabel.bottomAnchor, bottom: nil, left: headingLabel.leftAnchor, right: nil, paddingTop: 4, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 118, height: 30)
 
         wikiIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
         markerIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true

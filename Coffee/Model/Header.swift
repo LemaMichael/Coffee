@@ -10,7 +10,7 @@ import UIKit
 
 class Header {
     static let shared: Header = {
-        let instance = Header(height: UIScreen.main.bounds.height * 0.75, cutOff: 80)
+        let instance = Header(height: UIScreen.main.bounds.height * 0.68, cutOff: 80)
         return instance
     }()
     
