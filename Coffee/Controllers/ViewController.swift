@@ -154,6 +154,7 @@ class ViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        tableView.reloadData()
         footerView.updateViews()
     }
     
@@ -199,6 +200,10 @@ extension ViewController {
         footerView.updateReadCount(index: indexPath, fillColor: UIColor.App.allColors[indexPath.item])
         pvc.setViewController(index: indexPath.item)
         self.navigationController?.pushViewController(pvc, animated: true)
+        
+        tableView.beginUpdates()
+        tableView.reloadRows(at: [indexPath], with: .none)
+        tableView.endUpdates()
     }
 }
 
