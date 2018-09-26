@@ -44,9 +44,25 @@ class NewsCell: UITableViewCell {
         return label
     }()
     
+    let marker: UIImageView = {
+        let marker = UIImageView()
+        marker.image = UIImage(named: "Marker")
+        marker.contentMode = .scaleAspectFit
+        return marker
+    }()
+    let marker2: UIImageView = {
+        let marker = UIImageView()
+        marker.image = UIImage(named: "Mountain")
+        marker.contentMode = .scaleAspectFit
+        return marker
+    }()
+    
     lazy var itemsStackView: UIStackView = {
         let sv = UIStackView()
-        sv.distribution = .fillEqually
+        
+        sv.addArrangedSubview(marker)
+        sv.addArrangedSubview(marker2)
+        sv.distribution = .equalSpacing
         sv.axis = .horizontal
         return sv
     }()
@@ -117,6 +133,6 @@ class NewsCell: UITableViewCell {
         
         subHeadingLabel.anchor(top: headingLabel.bottomAnchor, bottom: nil, left: newsTypeLabel.leftAnchor, right: self.rightAnchor, paddingTop: 12, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: customHeight * 0.065)
         
-        itemsStackView.anchor(top: subHeadingLabel.bottomAnchor, bottom: nil, left: headingLabel.leftAnchor, right: headingLabel.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: customHeight * 0.13)
+        itemsStackView.anchor(top: subHeadingLabel.bottomAnchor, bottom: nil, left: headingLabel.leftAnchor, right: nil, paddingTop: 6, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: self.frame.width / 2, height: 25)
     }
 }

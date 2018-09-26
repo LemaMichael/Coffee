@@ -174,6 +174,10 @@ extension ViewController {
             let article = request.articles[indexPath.item]
             cell.update(title: article.title, source: article.source.id ?? article.source.name)
         }
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.App.allColors[indexPath.item].withAlphaComponent(0.45)
+        cell.selectedBackgroundView = backgroundView
         return cell
     }
     
