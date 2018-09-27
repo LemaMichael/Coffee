@@ -26,6 +26,7 @@
 		4C5A643B2155405C00AE4444 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A643A2155405C00AE4444 /* MainNavigationController.swift */; };
 		4C5A643D2155A16200AE4444 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A643C2155A16200AE4444 /* Header.swift */; };
 		4C5A643F2155A50D00AE4444 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A643E2155A50D00AE4444 /* ArticleCell.swift */; };
+		4CE8CB97215CB57C0016F0B5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8CB96215CB57C0016F0B5 /* Reachability.swift */; };
 		4CF9D23D21518525002E1499 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9D23C21518525002E1499 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		4C5A643A2155405C00AE4444 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		4C5A643C2155A16200AE4444 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		4C5A643E2155A50D00AE4444 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		4CE8CB96215CB57C0016F0B5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		4CF9D23C21518525002E1499 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				4C5A643C2155A16200AE4444 /* Header.swift */,
 				4C5A64332154B82D00AE4444 /* News.swift */,
 				4C53A7D6215829F200EBCA4A /* SMMRY.swift */,
+				4CE8CB96215CB57C0016F0B5 /* Reachability.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				4C5A64392155318600AE4444 /* Page.swift in Sources */,
 				4C531D982152921500B403CE /* BubbleCell.swift in Sources */,
 				4C531D9A2152930200B403CE /* CircleLayout.swift in Sources */,
+				4CE8CB97215CB57C0016F0B5 /* Reachability.swift in Sources */,
 				4CF9D23D21518525002E1499 /* FooterView.swift in Sources */,
 				4C2B5EDE214EEFFE0098B508 /* AppDelegate.swift in Sources */,
 				4C3ACAF2215C4F960028A8A0 /* TestInject.swift in Sources */,

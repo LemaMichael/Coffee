@@ -14,13 +14,16 @@ class MainNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if isLoggedIn() {
+        if connectedToInternet() {
             self.pushViewController(ViewController(), animated: false)
+        } else {
+            //: Display error 
+            
         }
     }
     
-    fileprivate func isLoggedIn() -> Bool {
-        return true
+    fileprivate func connectedToInternet() -> Bool {
+        return Reachability.isConnectedToNetwork()
     }
     
     //: MARK: - viewWillAppear
