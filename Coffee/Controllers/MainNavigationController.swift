@@ -17,8 +17,8 @@ class MainNavigationController: UINavigationController {
         if connectedToInternet() {
             self.pushViewController(ViewController(), animated: false)
         } else {
-            //: Display error 
-            
+            //: Display error if no connection
+            self.pushViewController(ErrorViewController(), animated: false)
         }
     }
     

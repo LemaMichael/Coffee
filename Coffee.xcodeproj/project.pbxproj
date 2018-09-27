@@ -27,6 +27,7 @@
 		4C5A643D2155A16200AE4444 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A643C2155A16200AE4444 /* Header.swift */; };
 		4C5A643F2155A50D00AE4444 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A643E2155A50D00AE4444 /* ArticleCell.swift */; };
 		4CE8CB97215CB57C0016F0B5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8CB96215CB57C0016F0B5 /* Reachability.swift */; };
+		4CE8CB99215CC04B0016F0B5 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8CB98215CC04B0016F0B5 /* ErrorViewController.swift */; };
 		4CF9D23D21518525002E1499 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9D23C21518525002E1499 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		4C5A643C2155A16200AE4444 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		4C5A643E2155A50D00AE4444 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		4CE8CB96215CB57C0016F0B5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		4CE8CB98215CC04B0016F0B5 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		4CF9D23C21518525002E1499 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				4C5A64362155316400AE4444 /* PageViewController.swift */,
 				4C5A64382155318600AE4444 /* Page.swift */,
 				4C3ACAF1215C4F960028A8A0 /* TestInject.swift */,
+				4CE8CB98215CC04B0016F0B5 /* ErrorViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				4C2925E4214F3FA40029996D /* Extensions.swift in Sources */,
 				4C5A643D2155A16200AE4444 /* Header.swift in Sources */,
+				4CE8CB99215CC04B0016F0B5 /* ErrorViewController.swift in Sources */,
 				4C5A64372155316400AE4444 /* PageViewController.swift in Sources */,
 				4C2925E0214F3B0F0029996D /* NewsTableViewCell.swift in Sources */,
 				4C5A643F2155A50D00AE4444 /* ArticleCell.swift in Sources */,
