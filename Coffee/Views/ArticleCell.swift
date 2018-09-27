@@ -35,6 +35,7 @@ class ArticleCell: UITableViewCell {
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.numberOfLines = 0
         label.sizeToFit()
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -106,7 +107,7 @@ class ArticleCell: UITableViewCell {
         newsTypeLabel.anchor(top: nil, bottom: nil, left: bubble.rightAnchor, right: nil, paddingTop: 0, paddingBottom: 0, paddingLeft: 8, paddingRight: 0, width: 150, height: 25)
         newsTypeLabel.centerYAnchor.constraint(equalTo: bubble.centerYAnchor).isActive = true
         
-        headingLabel.anchor(top: newsTypeLabel.bottomAnchor, bottom: nil, left: bubble.leftAnchor, right: self.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 4, paddingRight: 20, width: 0, height: customHeight * 0.4)
+        headingLabel.anchor(top: newsTypeLabel.bottomAnchor, bottom: nil, left: bubble.leftAnchor, right: self.rightAnchor, paddingTop: 2, paddingBottom: 0, paddingLeft: 4, paddingRight: 20, width: 0, height: customHeight * 0.4)
         
         bodyLabel.anchor(top: headingLabel.bottomAnchor, bottom: self.bottomAnchor, left: headingLabel.leftAnchor, right: headingLabel.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: 0)
         
