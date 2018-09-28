@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UITableViewController {
     let identifier = "cell"
-
+    
     var headerView: UIView!
     var headerMaskLayer: CAShapeLayer!
-
+    
     let headingView: UIView = {
         let view = UIView()
         return view
@@ -26,7 +26,7 @@ class ViewController: UITableViewController {
     
     let request = RequestNews()
     let pvc = PageViewController()
-
+    
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -222,11 +222,11 @@ extension ViewController {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateHeaderView()
         
-//        let  height = scrollView.frame.size.height
-//        let contentYoffset = scrollView.contentOffset.y
-//        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
-//        if distanceFromBottom < height {
-//            // We are at the bottom
-//        }
+        //        let  height = scrollView.frame.size.height
+        //        let contentYoffset = scrollView.contentOffset.y
+        //        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+        //        if distanceFromBottom < height {
+        //            // We are at the bottom
+        //        }
     }
 }
