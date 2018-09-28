@@ -1,4 +1,12 @@
-# Coffee
+<p align="center">
+  <img src = "/Demo/Display.png">
+</p>
+
+[![Swift](https://img.shields.io/badge/Swift-4.2%2B-orange.svg)](https://swift.org)
+![Platform](https://img.shields.io/badge/platform-iOS-333333.svg)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+
 A news digest application that summarizes an article in 7 sentences. 
 
 
