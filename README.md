@@ -27,3 +27,6 @@ Fill out the Configuration.plist file with the following API keys
 <p align="center">
  <img src = "/Demo/Demo.gif" height = "550"> <img src = "/Demo/Demo2.gif" height = "550"> <img src = "/Demo/StretchHeaders.gif" height = "550"> 
 </p>
+
+## License
+Coffee is released under the MIT license. See [LICENSE](https://github.com/LemaMichael/Coffee/blob/master/LICENSE) for more information.
