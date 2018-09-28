@@ -57,7 +57,7 @@ class Page: UIViewController {
     
     fileprivate func modifySummaryText(text: String) {
         let text = text + " "
-        self.body = text.replacingOccurrences(of: "[BREAK] ", with: "\n")
+        self.body = text.replacingOccurrences(of: "[BREAK] ", with: "\n\n")
         if self.body.first == " " {
             self.body = String(self.body.dropFirst())
         }
